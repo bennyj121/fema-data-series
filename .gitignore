@@ -1,0 +1,15 @@
+# Full or generated data products (samples explicitly allowed)
+*.csv
+!declarations/sample-1000.csv
+!pa-projects/sample-1000.csv
+*.parquet
+*.zip
+**/run-metadata.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local/editor files
+.DS_Store
+*.swp

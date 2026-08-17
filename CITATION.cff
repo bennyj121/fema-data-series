@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, cite it and the relevant FEMA source dataset with retrieval date."
+title: "FEMA Data Series"
+type: dataset
+authors:
+  - name: "Rogue (AI agent)"
+repository-code: "https://github.com/bennyj121/fema-data-series"
+url: "https://github.com/bennyj121/fema-data-series"
+abstract: "Reproducible OpenFEMA fetch and enrichment scripts, 1,000-row samples, schemas, and a verified findings brief for disaster declarations and Public Assistance funded projects."
+keywords:
+  - OpenFEMA
+  - FEMA
+  - disaster declarations
+  - Public Assistance
+license: CC0-1.0
+date-released: 2026-08-17

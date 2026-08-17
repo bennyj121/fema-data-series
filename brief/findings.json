@@ -1,0 +1,1170 @@
+{
+  "generated_at_utc": "2026-08-17T16:29:07Z",
+  "ai_authorship": "Built by Rogue, an AI agent. Not a human. Source data is U.S. government public information.",
+  "not_affiliated": "Not a FEMA product. Not affiliated with FEMA or DHS.",
+  "openfema_disclaimer": "This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).",
+  "sources": {
+    "declarations": {
+      "parquet": "paid full snapshot: fema-disaster-declarations-enriched.parquet",
+      "run_metadata": "paid full snapshot: run-metadata.json",
+      "fetched_at_utc": "2026-08-16T23:00:55Z",
+      "api_endpoint": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+      "dataset_page": "https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2",
+      "reported_count": 70243,
+      "downloaded_count": 70243
+    },
+    "pa_projects": {
+      "parquet": "paid full snapshot: fema-pa-funded-projects-enriched.parquet",
+      "run_metadata": "paid full snapshot: run-metadata.json",
+      "fetched_at_utc": "2026-08-17T06:23:38Z",
+      "api_endpoint": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails",
+      "dataset_page": "https://www.fema.gov/openfema-data-page/public-assistance-funded-projects-details-v2",
+      "reported_count": 847277,
+      "downloaded_count": 847116,
+      "metadata_sum_federal_share_obligated": 283657100484.85,
+      "parquet_minus_metadata_federal_cents_note": "Parquet double sum differs from run-metadata by about 5 cents (IEEE float)."
+    }
+  },
+  "declarations": {
+    "rows": 70243,
+    "unique_disaster_numbers": 5244,
+    "unique_jurisdictions": 59,
+    "declaration_date_min": "1953-05-02",
+    "declaration_date_max": "2026-08-15",
+    "declaration_year_min": 1953,
+    "declaration_year_max": 2026,
+    "fetched_at_utc": "2026-08-16T23:00:55Z",
+    "open_incident_rows": 658,
+    "open_incident_unique_disasters": 341,
+    "closed_rows_closeout_present": 52590,
+    "has_public_assistance_rows": 65725,
+    "has_public_assistance_unique_disasters": 5032,
+    "declaration_type_rows": {
+      "EM": 21566,
+      "FM": 2152,
+      "DR": 46525
+    },
+    "declaration_type_unique_disasters": {
+      "EM": 651,
+      "FM": 1668,
+      "DR": 2925
+    },
+    "incident_type_group_rows": {
+      "Flood": 11450,
+      "Fire": 3939,
+      "Tropical cyclone": 14955,
+      "Severe storm": 19429,
+      "Winter weather": 8342,
+      "Human / technological": 31,
+      "Other": 314,
+      "Geologic": 323,
+      "Tornado": 1623,
+      "Coastal / marine": 646,
+      "Biological": 7857,
+      "Drought / agriculture": 1334
+    },
+    "incident_type_group_unique_disasters": {
+      "Flood": 930,
+      "Fire": 1775,
+      "Tropical cyclone": 556,
+      "Severe storm": 1142,
+      "Winter weather": 300,
+      "Human / technological": 16,
+      "Other": 35,
+      "Geologic": 55,
+      "Tornado": 182,
+      "Coastal / marine": 34,
+      "Biological": 167,
+      "Drought / agriculture": 52
+    },
+    "incidentType_rows": {
+      "Flood": 11437,
+      "Fire": 3939,
+      "Typhoon": 135,
+      "Tropical Storm": 1087,
+      "Severe Storm": 19380,
+      "Winter Storm": 1378,
+      "Straight-Line Winds": 49,
+      "Chemical": 10,
+      "Hurricane": 13726,
+      "Other": 314,
+      "Tropical Depression": 7,
+      "Severe Ice Storm": 2956,
+      "Mud/Landslide": 44,
+      "Tornado": 1623,
+      "Snowstorm": 3707,
+      "Earthquake": 228,
+      "Coastal Storm": 637,
+      "Biological": 7857,
+      "Dam/Levee Break": 13,
+      "Volcanic Eruption": 51,
+      "Toxic Substances": 9,
+      "Terrorist": 5,
+      "Freezing": 301,
+      "Tsunami": 9,
+      "Drought": 1292,
+      "Human Cause": 7,
+      "Fishing Losses": 42
+    },
+    "incidentType_unique_disasters": {
+      "Flood": 924,
+      "Fire": 1775,
+      "Typhoon": 61,
+      "Tropical Storm": 40,
+      "Severe Storm": 1136,
+      "Winter Storm": 36,
+      "Straight-Line Winds": 6,
+      "Chemical": 2,
+      "Hurricane": 454,
+      "Other": 35,
+      "Tropical Depression": 1,
+      "Severe Ice Storm": 75,
+      "Mud/Landslide": 13,
+      "Tornado": 182,
+      "Snowstorm": 171,
+      "Earthquake": 36,
+      "Coastal Storm": 31,
+      "Biological": 167,
+      "Dam/Levee Break": 6,
+      "Volcanic Eruption": 6,
+      "Toxic Substances": 8,
+      "Terrorist": 2,
+      "Freezing": 18,
+      "Tsunami": 3,
+      "Drought": 46,
+      "Human Cause": 4,
+      "Fishing Losses": 6
+    },
+    "year_2020_rows": 9712,
+    "year_2020_unique_disasters": 315,
+    "texas_rows": 5424,
+    "texas_unique_disasters": 389,
+    "california_rows": 1691,
+    "california_unique_disasters": 397,
+    "flags": {
+      "is_hurricane": {
+        "rows": 14832,
+        "unique_disasters": 547
+      },
+      "is_flood": {
+        "rows": 28445,
+        "unique_disasters": 1923
+      },
+      "is_fire": {
+        "rows": 4200,
+        "unique_disasters": 1782
+      },
+      "is_covid": {
+        "rows": 7857,
+        "unique_disasters": 167
+      },
+      "is_tornado": {
+        "rows": 12366,
+        "unique_disasters": 673
+      },
+      "is_earthquake": {
+        "rows": 229,
+        "unique_disasters": 37
+      },
+      "is_drought": {
+        "rows": 1432,
+        "unique_disasters": 50
+      },
+      "is_winter": {
+        "rows": 13659,
+        "unique_disasters": 569
+      },
+      "is_severe_storm": {
+        "rows": 31643,
+        "unique_disasters": 2004
+      },
+      "is_biological": {
+        "rows": 7857,
+        "unique_disasters": 167
+      },
+      "is_tropical": {
+        "rows": 17080,
+        "unique_disasters": 639
+      }
+    },
+    "unique_incident_types": [
+      "Biological",
+      "Chemical",
+      "Coastal Storm",
+      "Dam/Levee Break",
+      "Drought",
+      "Earthquake",
+      "Fire",
+      "Fishing Losses",
+      "Flood",
+      "Freezing",
+      "Human Cause",
+      "Hurricane",
+      "Mud/Landslide",
+      "Other",
+      "Severe Ice Storm",
+      "Severe Storm",
+      "Snowstorm",
+      "Straight-Line Winds",
+      "Terrorist",
+      "Tornado",
+      "Toxic Substances",
+      "Tropical Depression",
+      "Tropical Storm",
+      "Tsunami",
+      "Typhoon",
+      "Volcanic Eruption",
+      "Winter Storm"
+    ]
+  },
+  "pa_projects": {
+    "rows": 847116,
+    "unique_gmProjectId": 847116,
+    "unique_disaster_numbers": 1783,
+    "unique_applicantId": 67274,
+    "declaration_date_min": "1998-08-26",
+    "declaration_date_max": "2026-06-30",
+    "declaration_year_min": 1998,
+    "declaration_year_max": 2026,
+    "fetched_at_utc": "2026-08-17T06:23:38Z",
+    "sum_federal_share_obligated": 283657100484.8,
+    "sum_project_amount": 348616116602.63,
+    "sum_total_obligated": 284174249650.76,
+    "incident_type_group": {
+      "Severe storm": {
+        "rows": 359510,
+        "unique_disasters": 860,
+        "federal_share_obligated": 19047793532.840054,
+        "share_of_rows": 0.42439288125829283,
+        "share_of_federal": 0.06715077288841126
+      },
+      "Winter weather": {
+        "rows": 64503,
+        "unique_disasters": 190,
+        "federal_share_obligated": 4332142589.930032,
+        "share_of_rows": 0.07614423526411968,
+        "share_of_federal": 0.015272463063769396
+      },
+      "Tropical cyclone": {
+        "rows": 263916,
+        "unique_disasters": 289,
+        "federal_share_obligated": 139300299399.15887,
+        "share_of_rows": 0.3115464706132336,
+        "share_of_federal": 0.49108694674337405
+      },
+      "Tornado": {
+        "rows": 6541,
+        "unique_disasters": 35,
+        "federal_share_obligated": 836294891.4500005,
+        "share_of_rows": 0.00772149268813244,
+        "share_of_federal": 0.0029482600295239712
+      },
+      "Flood": {
+        "rows": 83414,
+        "unique_disasters": 189,
+        "federal_share_obligated": 6810655621.840144,
+        "share_of_rows": 0.09846821450663192,
+        "share_of_federal": 0.024010171471822894
+      },
+      "Other": {
+        "rows": 9395,
+        "unique_disasters": 37,
+        "federal_share_obligated": 987323524.060002,
+        "share_of_rows": 0.011090570830913358,
+        "share_of_federal": 0.003480693846099962
+      },
+      "Fire": {
+        "rows": 10890,
+        "unique_disasters": 56,
+        "federal_share_obligated": 11994170892.099995,
+        "share_of_rows": 0.012855382261697336,
+        "share_of_federal": 0.04228404954996962
+      },
+      "Geologic": {
+        "rows": 5592,
+        "unique_disasters": 24,
+        "federal_share_obligated": 1896649324.790005,
+        "share_of_rows": 0.00660122108424348,
+        "share_of_federal": 0.006686415822302458
+      },
+      "Human / technological": {
+        "rows": 170,
+        "unique_disasters": 5,
+        "federal_share_obligated": 20076280.410000008,
+        "share_of_rows": 0.00020068089848379679,
+        "share_of_federal": 0.00007077658333137976
+      },
+      "Coastal / marine": {
+        "rows": 3120,
+        "unique_disasters": 17,
+        "federal_share_obligated": 559823705.0899993,
+        "share_of_rows": 0.003683084725114388,
+        "share_of_federal": 0.0019735931310487253
+      },
+      "Biological": {
+        "rows": 40064,
+        "unique_disasters": 80,
+        "federal_share_obligated": 97871796731.4797,
+        "share_of_rows": 0.047294585393263734,
+        "share_of_federal": 0.3450355960214162
+      },
+      "Drought / agriculture": {
+        "rows": 1,
+        "unique_disasters": 1,
+        "federal_share_obligated": 73991.65,
+        "share_of_rows": 0.0000011804758734340987,
+        "share_of_federal": 2.6084892595158183E-7
+      }
+    },
+    "incidentType": {
+      "Severe Storm(s)": {
+        "rows": 359413,
+        "unique_disasters": 859,
+        "federal_share_obligated": 19041389563.990047,
+        "share_of_rows": 0.42427837509856975,
+        "share_of_federal": 0.06712819644368605
+      },
+      "Winter Storm": {
+        "rows": 5983,
+        "unique_disasters": 51,
+        "federal_share_obligated": 1219406250.3000004,
+        "share_of_rows": 0.007062787150756213,
+        "share_of_federal": 0.004298874409334038
+      },
+      "Typhoon": {
+        "rows": 4469,
+        "unique_disasters": 22,
+        "federal_share_obligated": 536030052.92000085,
+        "share_of_rows": 0.005275546678376987,
+        "share_of_federal": 0.0018897113874599607
+      },
+      "Tornado": {
+        "rows": 6541,
+        "unique_disasters": 35,
+        "federal_share_obligated": 836294891.4500005,
+        "share_of_rows": 0.00772149268813244,
+        "share_of_federal": 0.0029482600295239712
+      },
+      "Flood": {
+        "rows": 83351,
+        "unique_disasters": 188,
+        "federal_share_obligated": 6790054924.060142,
+        "share_of_rows": 0.09839384452660556,
+        "share_of_federal": 0.023937546116262275
+      },
+      "Other": {
+        "rows": 9395,
+        "unique_disasters": 37,
+        "federal_share_obligated": 987323524.060002,
+        "share_of_rows": 0.011090570830913358,
+        "share_of_federal": 0.003480693846099962
+      },
+      "Wildfire": {
+        "rows": 3562,
+        "unique_disasters": 24,
+        "federal_share_obligated": 5616345316.279998,
+        "share_of_rows": 0.0042048550611722595,
+        "share_of_federal": 0.01979976988653226
+      },
+      "Tropical Storm": {
+        "rows": 13564,
+        "unique_disasters": 39,
+        "federal_share_obligated": 6142071554.070018,
+        "share_of_rows": 0.016011974747260117,
+        "share_of_federal": 0.021653156376387435
+      },
+      "Mud/Landslide": {
+        "rows": 467,
+        "unique_disasters": 8,
+        "federal_share_obligated": 102023040.62999997,
+        "share_of_rows": 0.0005512822328937241,
+        "share_of_federal": 0.0003596703218626708
+      },
+      "Hurricane": {
+        "rows": 245883,
+        "unique_disasters": 228,
+        "federal_share_obligated": 132622197792.16783,
+        "share_of_rows": 0.2902589491875965,
+        "share_of_federal": 0.46754407897952305
+      },
+      "Severe Storms, Straight-line Winds, Tornadoes, and Flooding": {
+        "rows": 97,
+        "unique_disasters": 1,
+        "federal_share_obligated": 6403968.849999999,
+        "share_of_rows": 0.00011450615972310757,
+        "share_of_federal": 0.00002257644472518029
+      },
+      "Toxic Substances": {
+        "rows": 6,
+        "unique_disasters": 1,
+        "federal_share_obligated": 1216773.7600000002,
+        "share_of_rows": 0.0000070828552406045925,
+        "share_of_federal": 0.000004289593872039181
+      },
+      "Earthquake": {
+        "rows": 5048,
+        "unique_disasters": 14,
+        "federal_share_obligated": 1654599758.0100055,
+        "share_of_rows": 0.005959042209095331,
+        "share_of_federal": 0.0058330983260497255
+      },
+      "Coastal Storm": {
+        "rows": 2940,
+        "unique_disasters": 14,
+        "federal_share_obligated": 509457761.9699996,
+        "share_of_rows": 0.0034705990678962502,
+        "share_of_federal": 0.0017960338771681808
+      },
+      "Biological": {
+        "rows": 40064,
+        "unique_disasters": 80,
+        "federal_share_obligated": 97871796731.4797,
+        "share_of_rows": 0.047294585393263734,
+        "share_of_federal": 0.3450355960214162
+      },
+      "National Special Security Event": {
+        "rows": 3,
+        "unique_disasters": 1,
+        "federal_share_obligated": 6215069.13,
+        "share_of_rows": 0.0000035414276203022962,
+        "share_of_federal": 0.00002191050081023105
+      },
+      "Snow": {
+        "rows": 35205,
+        "unique_disasters": 94,
+        "federal_share_obligated": 1220419166.5400064,
+        "share_of_rows": 0.04155865312424745,
+        "share_of_federal": 0.004302445327313087
+      },
+      "Volcano": {
+        "rows": 77,
+        "unique_disasters": 2,
+        "federal_share_obligated": 140026526.14999995,
+        "share_of_rows": 0.0000908966422544256,
+        "share_of_federal": 0.000493647174390064
+      },
+      "Fire": {
+        "rows": 7328,
+        "unique_disasters": 32,
+        "federal_share_obligated": 6377825575.820007,
+        "share_of_rows": 0.008650527200525076,
+        "share_of_federal": 0.022484279663437398
+      },
+      "Severe Ice Storm": {
+        "rows": 23115,
+        "unique_disasters": 43,
+        "federal_share_obligated": 1889064729.440015,
+        "share_of_rows": 0.027286699814429192,
+        "share_of_federal": 0.006659677216651385
+      },
+      "Chemical": {
+        "rows": 54,
+        "unique_disasters": 1,
+        "federal_share_obligated": 1639099.3900000001,
+        "share_of_rows": 0.00006374569716544134,
+        "share_of_federal": 0.000005778453587795285
+      },
+      "Terrorist Attack": {
+        "rows": 107,
+        "unique_disasters": 2,
+        "federal_share_obligated": 11005338.13,
+        "share_of_rows": 0.00012631091845744858,
+        "share_of_federal": 0.00003879803506131422
+      },
+      "Freezing": {
+        "rows": 200,
+        "unique_disasters": 2,
+        "federal_share_obligated": 3252443.6499999985,
+        "share_of_rows": 0.00023609517468681975,
+        "share_of_federal": 0.000011466110470850997
+      },
+      "Tsunami": {
+        "rows": 180,
+        "unique_disasters": 3,
+        "federal_share_obligated": 50365943.120000005,
+        "share_of_rows": 0.00021248565721813776,
+        "share_of_federal": 0.0001775592538805455
+      },
+      "Drought": {
+        "rows": 1,
+        "unique_disasters": 1,
+        "federal_share_obligated": 73991.65,
+        "share_of_rows": 0.0000011804758734340987,
+        "share_of_federal": 2.6084892595158183E-7
+      },
+      "Dam/Levee Break": {
+        "rows": 63,
+        "unique_disasters": 1,
+        "federal_share_obligated": 20600697.780000005,
+        "share_of_rows": 0.00007436998002634822,
+        "share_of_federal": 0.00007262535556060904
+      }
+    },
+    "work_class": {
+      "Emergency Work": {
+        "rows": 326630,
+        "unique_disasters": 1771,
+        "federal_share_obligated": 156472357605.43646,
+        "share_of_rows": 0.3855788345397797,
+        "share_of_federal": 0.5516250336692036
+      },
+      "Permanent Work": {
+        "rows": 487596,
+        "unique_disasters": 1486,
+        "federal_share_obligated": 111703238138.51114,
+        "share_of_rows": 0.5755953139829728,
+        "share_of_federal": 0.39379672833008056
+      },
+      "Management Costs": {
+        "rows": 32883,
+        "unique_disasters": 1676,
+        "federal_share_obligated": 15480869033.060015,
+        "share_of_rows": 0.03881758814613347,
+        "share_of_federal": 0.054575996887092096
+      },
+      "Building Code / Administration": {
+        "rows": 7,
+        "unique_disasters": 4,
+        "federal_share_obligated": 635707.8200000001,
+        "share_of_rows": 0.000008263331114038691,
+        "share_of_federal": 0.000002241113721156665
+      }
+    },
+    "federal_obligation_bucket": {
+      "under_10k": {
+        "rows": 394822,
+        "unique_disasters": 1712,
+        "federal_share_obligated": 1559745468.9302044,
+        "share_of_rows": 0.4660778453009977,
+        "share_of_federal": 0.00549870060105823
+      },
+      "10k_to_100k": {
+        "rows": 307210,
+        "unique_disasters": 1759,
+        "federal_share_obligated": 10122234114.689583,
+        "share_of_rows": 0.3626539930776895,
+        "share_of_federal": 0.03568475492906616
+      },
+      "100k_to_1m": {
+        "rows": 91439,
+        "unique_disasters": 1705,
+        "federal_share_obligated": 28439417497.820225,
+        "share_of_rows": 0.10794153339094055,
+        "share_of_federal": 0.10025984700969676
+      },
+      "1m_to_10m": {
+        "rows": 19741,
+        "unique_disasters": 988,
+        "federal_share_obligated": 56365870728.28028,
+        "share_of_rows": 0.023303774217462544,
+        "share_of_federal": 0.19871129836674298
+      },
+      "10m_plus": {
+        "rows": 3315,
+        "unique_disasters": 264,
+        "federal_share_obligated": 187685022892.0702,
+        "share_of_rows": 0.003913277520434038,
+        "share_of_federal": 0.6616616420717008
+      },
+      "zero": {
+        "rows": 29629,
+        "unique_disasters": 1208,
+        "federal_share_obligated": 0.0,
+        "share_of_rows": 0.03497631965397891,
+        "share_of_federal": 0.0
+      },
+      "negative": {
+        "rows": 960,
+        "unique_disasters": 430,
+        "federal_share_obligated": -515190216.99000007,
+        "share_of_rows": 0.0011332568384967347,
+        "share_of_federal": -0.0018162429782631407
+      }
+    },
+    "damage_category": {
+      "B|Emergency Protective Measures": {
+        "rows": 225249,
+        "unique_disasters": 1757,
+        "federal_share_obligated": 130667779178.05406,
+        "share_of_rows": 0.2659010100151573,
+        "share_of_federal": 0.46065400427039904
+      },
+      "F|Utilities": {
+        "rows": 47833,
+        "unique_disasters": 1355,
+        "federal_share_obligated": 40466321962.46938,
+        "share_of_rows": 0.05646570245397325,
+        "share_of_federal": 0.14265929494910637
+      },
+      "A|Debris Removal": {
+        "rows": 90122,
+        "unique_disasters": 1396,
+        "federal_share_obligated": 25625119437.820602,
+        "share_of_rows": 0.10638684666562785,
+        "share_of_federal": 0.09033836767711637
+      },
+      "E|Buildings and Equipment": {
+        "rows": 112751,
+        "unique_disasters": 1303,
+        "federal_share_obligated": 39743737277.0898,
+        "share_of_rows": 0.13309983520556806,
+        "share_of_federal": 0.14011190697910805
+      },
+      "Z|Management Costs": {
+        "rows": 21250,
+        "unique_disasters": 551,
+        "federal_share_obligated": 9220143617.050018,
+        "share_of_rows": 0.025085112310474597,
+        "share_of_federal": 0.032504540169422225
+      },
+      "B|Emergency Work Donated Resources": {
+        "rows": 11259,
+        "unique_disasters": 935,
+        "federal_share_obligated": 179458989.5499983,
+        "share_of_rows": 0.013290977858994519,
+        "share_of_federal": 0.0006326617216466076
+      },
+      "G|Parks, Recreational Facilities, and Other Items": {
+        "rows": 49585,
+        "unique_disasters": 1305,
+        "federal_share_obligated": 8189588000.930126,
+        "share_of_rows": 0.058533896184229786,
+        "share_of_federal": 0.028871436628708586
+      },
+      "C|Roads and Bridges": {
+        "rows": 262051,
+        "unique_disasters": 1326,
+        "federal_share_obligated": 20236477657.100883,
+        "share_of_rows": 0.309344883109279,
+        "share_of_federal": 0.07134134002820519
+      },
+      "D|Water Control Facilities": {
+        "rows": 15376,
+        "unique_disasters": 817,
+        "federal_share_obligated": 3067113240.9100146,
+        "share_of_rows": 0.018150997029922702,
+        "share_of_federal": 0.01081274974491382
+      },
+      "I|Building Code Management and Enforcement": {
+        "rows": 7,
+        "unique_disasters": 4,
+        "federal_share_obligated": 635707.8200000001,
+        "share_of_rows": 0.000008263331114038691,
+        "share_of_federal": 0.000002241113721156665
+      },
+      "Z|Section 324 Management Costs": {
+        "rows": 2712,
+        "unique_disasters": 1069,
+        "federal_share_obligated": 1859449565.7999952,
+        "share_of_rows": 0.003201450568753276,
+        "share_of_federal": 0.006555272413847562
+      },
+      "Z|Direct Administrative Costs": {
+        "rows": 8921,
+        "unique_disasters": 581,
+        "federal_share_obligated": 4401275850.21001,
+        "share_of_rows": 0.010531025266905594,
+        "share_of_federal": 0.01551618430382234
+      }
+    },
+    "large_project_rows": 119424,
+    "large_project_share_of_rows": 0.1409771507089938,
+    "large_project_federal_share_obligated": 266298601198.25,
+    "large_project_share_of_federal": 0.9388046368066145,
+    "small_project_rows": 727692,
+    "flags": {
+      "is_hurricane": {
+        "rows": 250352,
+        "unique_disasters": 250,
+        "federal_share_obligated": 133158227845.09,
+        "share_of_rows": 0.29553449586597347,
+        "share_of_federal": 0.4694337903669906
+      },
+      "is_flood": {
+        "rows": 83448,
+        "unique_disasters": 189,
+        "federal_share_obligated": 6796458892.91,
+        "share_of_rows": 0.09850835068632867,
+        "share_of_federal": 0.023960122560986955
+      },
+      "is_fire": {
+        "rows": 10890,
+        "unique_disasters": 56,
+        "federal_share_obligated": 11994170892.1,
+        "share_of_rows": 0.012855382261697336,
+        "share_of_federal": 0.04228404954996964
+      },
+      "is_covid": {
+        "rows": 15599,
+        "unique_disasters": 71,
+        "federal_share_obligated": 35423960340.16,
+        "share_of_rows": 0.018414243149698507,
+        "share_of_federal": 0.12488303758170237
+      },
+      "is_tornado": {
+        "rows": 6638,
+        "unique_disasters": 36,
+        "federal_share_obligated": 842698860.3,
+        "share_of_rows": 0.007835998847855548,
+        "share_of_federal": 0.0029708364742491496
+      },
+      "is_earthquake": {
+        "rows": 5048,
+        "unique_disasters": 14,
+        "federal_share_obligated": 1654599758.01,
+        "share_of_rows": 0.005959042209095331,
+        "share_of_federal": 0.0058330983260497056
+      },
+      "is_drought": {
+        "rows": 1,
+        "unique_disasters": 1,
+        "federal_share_obligated": 73991.65,
+        "share_of_rows": 0.0000011804758734340987,
+        "share_of_federal": 2.6084892595158183E-7
+      },
+      "is_winter": {
+        "rows": 64503,
+        "unique_disasters": 190,
+        "federal_share_obligated": 4332142589.93,
+        "share_of_rows": 0.07614423526411968,
+        "share_of_federal": 0.015272463063769285
+      },
+      "is_severe_storm": {
+        "rows": 359510,
+        "unique_disasters": 860,
+        "federal_share_obligated": 19047793532.84,
+        "share_of_rows": 0.42439288125829283,
+        "share_of_federal": 0.06715077288841106
+      },
+      "is_biological": {
+        "rows": 40064,
+        "unique_disasters": 80,
+        "federal_share_obligated": 97871796731.48,
+        "share_of_rows": 0.047294585393263734,
+        "share_of_federal": 0.3450355960214172
+      },
+      "is_tropical": {
+        "rows": 263916,
+        "unique_disasters": 289,
+        "federal_share_obligated": 139300299399.16,
+        "share_of_rows": 0.3115464706132336,
+        "share_of_federal": 0.49108694674337805
+      }
+    },
+    "year_2020_rows": 53747,
+    "year_2020_unique_disasters": 134,
+    "year_2020_federal_share_obligated": 106198253099.30055,
+    "year_2020_share_of_federal": 0.37438954610265884,
+    "biological_2020_rows": 40053,
+    "biological_2021_rows": 11,
+    "biological_2020_federal_share_obligated": 97869341310.15,
+    "tropical_plus_biological_rows": 303980,
+    "tropical_plus_biological_share_of_rows": 0.35884105600649735,
+    "tropical_plus_biological_federal_share_obligated": 237172096130.63858,
+    "tropical_plus_biological_share_of_federal": 0.8361225427647903,
+    "top10_disasters_share_of_federal": 0.5133336502184703,
+    "top5_disasters_share_of_federal": 0.3687174631982262,
+    "top1_disaster_share_of_federal": 0.12589446833862533,
+    "hurricane_maria_pr_usvi_disaster_numbers": [
+      4339,
+      4340
+    ],
+    "hurricane_maria_pr_usvi_federal_share_obligated": 57723760724.2399,
+    "hurricane_maria_pr_usvi_share_of_federal": 0.20349838105791776,
+    "top_disasters": [
+      {
+        "disasterNumber": 4339,
+        "declaration_title": "HURRICANE MARIA",
+        "incidentType": "Hurricane",
+        "declaration_date_iso": "2017-09-20",
+        "project_rows": 11341,
+        "federal_share_obligated": 35710859856.00992,
+        "share_of_federal": 0.12589446833862533
+      },
+      {
+        "disasterNumber": 4340,
+        "declaration_title": "HURRICANE MARIA",
+        "incidentType": "Hurricane",
+        "declaration_date_iso": "2017-09-20",
+        "project_rows": 1176,
+        "federal_share_obligated": 22012900868.229977,
+        "share_of_federal": 0.07760391271929241
+      },
+      {
+        "disasterNumber": 4480,
+        "declaration_title": "COVID-19 PANDEMIC",
+        "incidentType": "Biological",
+        "declaration_date_iso": "2020-03-20",
+        "project_rows": 4238,
+        "federal_share_obligated": 17401919199.22992,
+        "share_of_federal": 0.0613484350276732
+      },
+      {
+        "disasterNumber": 4085,
+        "declaration_title": "HURRICANE SANDY",
+        "incidentType": "Hurricane",
+        "declaration_date_iso": "2012-10-30",
+        "project_rows": 4508,
+        "federal_share_obligated": 14799317484.639969,
+        "share_of_federal": 0.0521732664521578
+      },
+      {
+        "disasterNumber": 4482,
+        "declaration_title": "COVID-19 PANDEMIC",
+        "incidentType": "Biological",
+        "declaration_date_iso": "2020-03-22",
+        "project_rows": 3837,
+        "federal_share_obligated": 14664329100.809996,
+        "share_of_federal": 0.05169738066047741
+      },
+      {
+        "disasterNumber": 4485,
+        "declaration_title": "COVID-19 PANDEMIC",
+        "incidentType": "Biological",
+        "declaration_date_iso": "2020-03-25",
+        "project_rows": 1323,
+        "federal_share_obligated": 14346228119.720005,
+        "share_of_federal": 0.05057595277960884
+      },
+      {
+        "disasterNumber": 1603,
+        "declaration_title": "HURRICANE KATRINA",
+        "incidentType": "Hurricane",
+        "declaration_date_iso": "2005-08-29",
+        "project_rows": 16774,
+        "federal_share_obligated": 13459403563.150023,
+        "share_of_federal": 0.04744955631340262
+      },
+      {
+        "disasterNumber": 4486,
+        "declaration_title": "COVID-19 PANDEMIC",
+        "incidentType": "Biological",
+        "declaration_date_iso": "2020-03-25",
+        "project_rows": 1203,
+        "federal_share_obligated": 4923027481.359997,
+        "share_of_federal": 0.01735555878187439
+      },
+      {
+        "disasterNumber": 1391,
+        "declaration_title": "FIRES AND EXPLOSIONS",
+        "incidentType": "Fire",
+        "declaration_date_iso": "2001-09-11",
+        "project_rows": 1135,
+        "federal_share_obligated": 4708614486.950001,
+        "share_of_federal": 0.016599670795839346
+      },
+      {
+        "disasterNumber": 4611,
+        "declaration_title": "HURRICANE IDA",
+        "incidentType": "Hurricane",
+        "declaration_date_iso": "2021-08-29",
+        "project_rows": 3608,
+        "federal_share_obligated": 3584134642.1499987,
+        "share_of_federal": 0.012635448349518956
+      }
+    ],
+    "top_states_by_federal": [
+      {
+        "state_name": "New York",
+        "rows": 59290,
+        "unique_disasters": 61,
+        "federal_share_obligated": 41061245384.52885,
+        "share_of_rows": 0.06999041453590772,
+        "share_of_federal": 0.1447566280355783
+      },
+      {
+        "state_name": "Puerto Rico",
+        "rows": 22926,
+        "unique_disasters": 20,
+        "federal_share_obligated": 39146366414.60916,
+        "share_of_rows": 0.027063589874350147,
+        "share_of_federal": 0.1380059457270905
+      },
+      {
+        "state_name": "Louisiana",
+        "rows": 46310,
+        "unique_disasters": 46,
+        "federal_share_obligated": 26026297018.20949,
+        "share_of_rows": 0.05466783769873311,
+        "share_of_federal": 0.09175267241231683
+      },
+      {
+        "state_name": "Texas",
+        "rows": 51689,
+        "unique_disasters": 45,
+        "federal_share_obligated": 23005916692.14003,
+        "share_of_rows": 0.06101761742193513,
+        "share_of_federal": 0.08110467410412249
+      },
+      {
+        "state_name": "California",
+        "rows": 27684,
+        "unique_disasters": 60,
+        "federal_share_obligated": 22293965509.760246,
+        "share_of_rows": 0.03268029408014959,
+        "share_of_federal": 0.07859477330783365
+      },
+      {
+        "state_name": "U.S. Virgin Islands",
+        "rows": 2483,
+        "unique_disasters": 13,
+        "federal_share_obligated": 22241224107.309982,
+        "share_of_rows": 0.002931121593736867,
+        "share_of_federal": 0.07840883964934203
+      },
+      {
+        "state_name": "Florida",
+        "rows": 74238,
+        "unique_disasters": 55,
+        "federal_share_obligated": 21794815806.39972,
+        "share_of_rows": 0.08763616789200063,
+        "share_of_federal": 0.07683507928816191
+      },
+      {
+        "state_name": "New Jersey",
+        "rows": 26296,
+        "unique_disasters": 31,
+        "federal_share_obligated": 6740530720.020034,
+        "share_of_rows": 0.03104179356782306,
+        "share_of_federal": 0.023762954315262173
+      },
+      {
+        "state_name": "North Carolina",
+        "rows": 22619,
+        "unique_disasters": 34,
+        "federal_share_obligated": 6604042397.890078,
+        "share_of_rows": 0.02670118378120588,
+        "share_of_federal": 0.0232817806661743
+      },
+      {
+        "state_name": "Mississippi",
+        "rows": 18988,
+        "unique_disasters": 50,
+        "federal_share_obligated": 4377298052.439994,
+        "share_of_rows": 0.022414875884766667,
+        "share_of_federal": 0.015431653376413735
+      }
+    ],
+    "top5_states_share_of_federal": 0.5342146935869417,
+    "top10_states_share_of_federal": 0.7519350008822959,
+    "unique_states_territories": 56,
+    "pa_federal_by_declaration_year": {
+      "1998": {
+        "rows": 2054,
+        "unique_disasters": 2,
+        "federal_share_obligated": 40187165.970000006,
+        "share_of_federal": 0.00014167516308005647
+      },
+      "1999": {
+        "rows": 24420,
+        "unique_disasters": 57,
+        "federal_share_obligated": 905463911.4899957,
+        "share_of_federal": 0.003192107336437065
+      },
+      "2000": {
+        "rows": 15785,
+        "unique_disasters": 42,
+        "federal_share_obligated": 749840707.6599995,
+        "share_of_federal": 0.0026434758952920356
+      },
+      "2001": {
+        "rows": 28167,
+        "unique_disasters": 53,
+        "federal_share_obligated": 5840254540.290021,
+        "share_of_federal": 0.020589135721645637
+      },
+      "2002": {
+        "rows": 18317,
+        "unique_disasters": 44,
+        "federal_share_obligated": 706153780.8999952,
+        "share_of_federal": 0.002489462734030291
+      },
+      "2003": {
+        "rows": 30751,
+        "unique_disasters": 68,
+        "federal_share_obligated": 1062023228.8600038,
+        "share_of_federal": 0.0037440389366065357
+      },
+      "2004": {
+        "rows": 58147,
+        "unique_disasters": 65,
+        "federal_share_obligated": 3400006302.7100716,
+        "share_of_federal": 0.01198632537983044
+      },
+      "2005": {
+        "rows": 71014,
+        "unique_disasters": 109,
+        "federal_share_obligated": 21188408735.840523,
+        "share_of_federal": 0.07469726193924739
+      },
+      "2006": {
+        "rows": 27419,
+        "unique_disasters": 53,
+        "federal_share_obligated": 1083566952.5299945,
+        "share_of_federal": 0.003819988819874644
+      },
+      "2007": {
+        "rows": 39980,
+        "unique_disasters": 63,
+        "federal_share_obligated": 1710579760.4400117,
+        "share_of_federal": 0.0060304492907685015
+      },
+      "2008": {
+        "rows": 73244,
+        "unique_disasters": 82,
+        "federal_share_obligated": 5953213122.930027,
+        "share_of_federal": 0.020987358020495013
+      },
+      "2009": {
+        "rows": 40272,
+        "unique_disasters": 61,
+        "federal_share_obligated": 1606102711.5500026,
+        "share_of_federal": 0.005662127649210978
+      },
+      "2010": {
+        "rows": 47550,
+        "unique_disasters": 83,
+        "federal_share_obligated": 1540488010.2500236,
+        "share_of_federal": 0.005430810678164469
+      },
+      "2011": {
+        "rows": 84960,
+        "unique_disasters": 110,
+        "federal_share_obligated": 3820747765.570107,
+        "share_of_federal": 0.013469600299234693
+      },
+      "2012": {
+        "rows": 24010,
+        "unique_disasters": 46,
+        "federal_share_obligated": 18166656870.460197,
+        "share_of_federal": 0.0640444284292953
+      },
+      "2013": {
+        "rows": 15392,
+        "unique_disasters": 63,
+        "federal_share_obligated": 1246711890.9799957,
+        "share_of_federal": 0.004395137258504135
+      },
+      "2014": {
+        "rows": 8097,
+        "unique_disasters": 46,
+        "federal_share_obligated": 1023423492.8799994,
+        "share_of_federal": 0.0036079600726752845
+      },
+      "2015": {
+        "rows": 13269,
+        "unique_disasters": 42,
+        "federal_share_obligated": 1146179146.0499969,
+        "share_of_federal": 0.004040720800188169
+      },
+      "2016": {
+        "rows": 18116,
+        "unique_disasters": 47,
+        "federal_share_obligated": 3269448962.180016,
+        "share_of_federal": 0.011526060714123433
+      },
+      "2017": {
+        "rows": 39507,
+        "unique_disasters": 61,
+        "federal_share_obligated": 65697326444.69966,
+        "share_of_federal": 0.2316082563504174
+      },
+      "2018": {
+        "rows": 16559,
+        "unique_disasters": 56,
+        "federal_share_obligated": 7045206167.610025,
+        "share_of_federal": 0.024837052044771744
+      },
+      "2019": {
+        "rows": 21403,
+        "unique_disasters": 59,
+        "federal_share_obligated": 2325206039.3200026,
+        "share_of_federal": 0.008197242499292207
+      },
+      "2020": {
+        "rows": 53747,
+        "unique_disasters": 134,
+        "federal_share_obligated": 106198253099.30055,
+        "share_of_federal": 0.37438954610265884
+      },
+      "2021": {
+        "rows": 15726,
+        "unique_disasters": 63,
+        "federal_share_obligated": 6965376837.740019,
+        "share_of_federal": 0.024555623059798092
+      },
+      "2022": {
+        "rows": 13744,
+        "unique_disasters": 48,
+        "federal_share_obligated": 6451170767.409985,
+        "share_of_federal": 0.022742849575717483
+      },
+      "2023": {
+        "rows": 13817,
+        "unique_disasters": 74,
+        "federal_share_obligated": 3338971310.9700074,
+        "share_of_federal": 0.011771153640304975
+      },
+      "2024": {
+        "rows": 24176,
+        "unique_disasters": 92,
+        "federal_share_obligated": 9876076526.239927,
+        "share_of_federal": 0.034816955081895244
+      },
+      "2025": {
+        "rows": 6444,
+        "unique_disasters": 41,
+        "federal_share_obligated": 1111920510.0799994,
+        "share_of_federal": 0.00391994597765968
+      },
+      "2026": {
+        "rows": 1029,
+        "unique_disasters": 19,
+        "federal_share_obligated": 188135721.89000028,
+        "share_of_federal": 0.0006632505287844247
+      }
+    }
+  },
+  "join": {
+    "declarations_unique_disaster_numbers": 5244,
+    "pa_unique_disaster_numbers": 1783,
+    "intersection": 1783,
+    "pa_only": 0,
+    "declarations_only": 3461,
+    "declarations_on_or_after_pa_coverage_start": 3648,
+    "pa_coverage_start": "1998-08-26",
+    "declarations_on_or_after_pa_coverage_start_with_pa_projects": 1783,
+    "share_of_post_coverage_start_declarations_with_pa_projects": 0.4887609649122807,
+    "pre_1998_unique_disasters": 1506,
+    "pa_flagged_on_or_after_coverage_start": 3549,
+    "pa_flagged_on_or_after_coverage_start_missing_from_pa_file": 1766,
+    "note": "Public Assistance Funded Projects Details excludes open (pre-obligation) projects. A PA-declared disaster can have zero rows in the PA file. Offset pagination on a live table missed 161 rows at fetch (847,116 written vs OpenFEMA $count 847,277)."
+  },
+  "brief_findings": [
+    {
+      "id": 1,
+      "title": "Declarations are area-rows, not events",
+      "claim": "The declarations snapshot has 70,243 designated-area rows covering 5,244 unique disaster numbers, with declaration dates from 1953-05-02 through 2026-08-15."
+    },
+    {
+      "id": 2,
+      "title": "Common hazards are not where the Public Assistance dollars sit",
+      "claim": "In 847,116 obligated PA project worksheets (declaration dates 1998-08-26 through 2026-06-30; $283,657,100,484.80 federal share obligated), severe-storm rows are 359,510 (42.4%) but 6.7% of federal dollars; tropical-cyclone rows are 263,916 (31.2%) and 49.1% of dollars; biological rows are 40,064 (4.7%) and 34.5% of dollars."
+    },
+    {
+      "id": 3,
+      "title": "A thin tail of worksheets holds most federal dollars",
+      "claim": "3,315 of 847,116 worksheets (0.39%) have a federal share of $10 million or more and hold $187,685,022,892.07 (66.2%) of all federal share obligated. Officially Large projects are 119,424 of 847,116 rows (14.1%) and hold $266,298,601,198.25 (93.9%)."
+    },
+    {
+      "id": 4,
+      "title": "2020 declarations dominate the PA dollar total",
+      "claim": "Disasters declared in calendar year 2020 account for 53,747 of 847,116 PA worksheets and $106,198,253,099.30 of $283,657,100,484.80 federal share obligated (37.4%). 40,053 of 40,064 biological PA rows were declared in 2020."
+    },
+    {
+      "id": 5,
+      "title": "Every PA disaster joins; most declarations have no obligated PA row here",
+      "claim": "All 1,783 unique disaster numbers in the PA file appear in the declarations file. Only 1,783 of 3,648 unique declarations dated on or after 1998-08-26 (48.9%) have at least one obligated PA project in this snapshot. 1,766 PA-flagged declarations in that window have zero PA-file rows (source excludes pre-obligation projects)."
+    }
+  ]
+}
