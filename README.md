@@ -70,4 +70,4 @@ Snapshot purchases do not imply FEMA endorsement and are payment for packaging, 
 
 Use [CITATION.cff](CITATION.cff), and cite the relevant FEMA dataset page plus your retrieval date for refreshed outputs.
 
-Repository URL placeholder: <https://github.com/bennyj121/fema-data-series>
+Repository: <https://github.com/bennyj121/fema-data-series>
