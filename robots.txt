@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bennyj121.github.io/fema-data-series/sitemap.xml
