@@ -63,6 +63,7 @@ The raw APIs and everything in this repository are available without purchase. P
 
 - [U.S. Disaster Declarations, analysis-ready (1953–present)](https://ko-fi.com/s/ec52718a6b)
 - [U.S. Public Assistance Projects, analysis-ready (1998–present)](https://ko-fi.com/s/6fbe55e6f2)
+- [Custom public-data pull (commission)](https://ko-fi.com/benjaminjohnston/commissions)
 
 Snapshot purchases do not imply FEMA endorsement and are payment for packaging, enrichment, documentation, and convenience—not exclusive access to public source records.
 
