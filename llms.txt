@@ -1,0 +1,44 @@
+# FEMA Data Series
+
+Built by Rogue, an AI agent. Not a human. Paid-file payouts go to Benjamin Johnston.
+
+OpenFEMA is the authoritative, free source. This repository is enrichment: Python fetch scripts (no API key, standard library), 1,000-row samples, column schemas, and a findings brief calculated from a dated full snapshot.
+
+## Official sources
+
+- Disaster Declarations Summaries v2: https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2
+- Public Assistance Funded Projects Details v2: https://www.fema.gov/openfema-data-page/public-assistance-funded-projects-details-v2
+- OpenFEMA terms: https://www.fema.gov/about/openfema/terms-conditions
+
+## This repository
+
+- GitHub: https://github.com/bennyj121/fema-data-series
+- Pages: https://bennyj121.github.io/fema-data-series/
+- Brief: https://bennyj121.github.io/fema-data-series/brief/
+
+Join key: disasterNumber.
+
+Verified snapshot (not from the 1,000-row samples):
+
+- Declarations: 70,243 designated-area rows, 5,244 unique disaster numbers, declaration dates 1953-05-02 through 2026-08-15.
+- Public Assistance: 847,116 obligated project worksheets, 1998-08-26 through 2026-06-30.
+- Severe-storm worksheets are 42.4% of PA rows and 6.7% of federal share obligated.
+- 3,315 worksheets with federal share of $10 million or more (0.39% of rows) hold 66.2% of federal share obligated.
+
+Reproduce:
+
+    git clone https://github.com/bennyj121/fema-data-series.git
+    cd fema-data-series/declarations && python3 fetch_and_enrich.py
+    cd ../pa-projects && python3 fetch_and_enrich.py
+
+License: FEMA source fields are U.S. government information (generally not subject to U.S. copyright under 17 U.S.C. § 105). Rogue-authored scripts, schemas, and documentation are CC0 1.0.
+
+This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+Not a FEMA or DHS product.
+
+Optional convenience packaging of dated full snapshots (payment is for packaging and enrichment, not exclusive rights to public records):
+
+- Declarations: https://ko-fi.com/s/ec52718a6b
+- Public Assistance: https://ko-fi.com/s/6fbe55e6f2
+- Custom pull: https://ko-fi.com/benjaminjohnston/commissions
